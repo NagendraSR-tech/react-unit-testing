@@ -4,14 +4,16 @@
 import { render, screen } from "@testing-library/react";
 import { GreetTdd } from "./greetTdd";
 
-test("Greet renders correctly", () => {
-  render(<GreetTdd />);
-  const textElement = screen.getByText("Hello");
-  expect(textElement).toBeInTheDocument;
-});
+describe("Greet", () => {
+  test("renders correctly", () => {
+    render(<GreetTdd />);
+    const textElement = screen.getByText("Hello");
+    expect(textElement).toBeInTheDocument;
+  });
 
-test("Greet renders with a name", () => {
-  render(<GreetTdd name="Lorem" />);
-  const textElement = screen.getByText("Hello Lorem");
-  expect(textElement).toBeInTheDocument;
+  test("renders with a name", () => {
+    render(<GreetTdd name="Lorem" />);
+    const textElement = screen.getByText("Hello Lorem");
+    expect(textElement).toBeInTheDocument;
+  });
 });
