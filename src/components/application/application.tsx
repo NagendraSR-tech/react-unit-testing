@@ -11,7 +11,8 @@ export function Application() {
         <label htmlFor="bio">Bio</label>
         <textarea id='bio' name="bio"/>
         <div>
-            <label htmlFor="job-location">job location</label>
+            {/* <label htmlFor="job-location">job location</label> */}
+            <label htmlFor="job-location">Name</label>
             <select id="job-location">
                 <option value="">Select a country</option>
                 <option value="US">United States</option>
@@ -24,7 +25,7 @@ export function Application() {
         <div>
             <label>
                 <input type="checkbox" id='terms' />
-                I agree to the terms and consitions
+                I agree to the terms and conditions
             </label>
         </div>
         <button>Submit</button>
