@@ -3,10 +3,12 @@ export function Application() {
     <>
     <h1>Job Application form</h1>
     <h2>Section 1</h2>
+    <p>All fields are mandatory</p>
+    <img src="https://via.placeholder.com/150" alt="a person with a laptop" />
     <form action="">
         <div>
             <label htmlFor="name">Name</label>
-            <input type="text" id='name'/>
+            <input type="text" id='name' placeholder="Fullname" value="John Doe" onChange={() => {}}/>
         </div>
         <label htmlFor="bio">Bio</label>
         <textarea id='bio' name="bio"/>
