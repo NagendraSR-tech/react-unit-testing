@@ -4,6 +4,7 @@ export function Application() {
     <h1>Job Application form</h1>
     <h2>Section 1</h2>
     <p>All fields are mandatory</p>
+    <p>All lorem</p>
     <span title="close"></span>
     <img src="https://via.placeholder.com/150" alt="a person with a laptop" />
     <div data-testid="custom-element">Custom HTML element</div>
