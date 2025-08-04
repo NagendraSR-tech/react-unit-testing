@@ -1,40 +1,46 @@
 export function Application() {
   return (
     <>
-    <h1>Job Application form</h1>
-    <h2>Section 1</h2>
-    <p>All fields are mandatory</p>
-    <p>All lorem</p>
-    <span title="close"></span>
-    <img src="https://via.placeholder.com/150" alt="a person with a laptop" />
-    <div data-testid="custom-element">Custom HTML element</div>
-    <form action="">
+      <h1>Job Application form</h1>
+      <h2>Section 1</h2>
+      <p>All fields are mandatory</p>
+      <p>All lorem</p>
+      <span title="close"></span>
+      <img src="https://via.placeholder.com/150" alt="a person with a laptop" />
+      <div data-testid="custom-element">Custom HTML element</div>
+      <form action="">
         <div>
-            <label htmlFor="name">Name</label>
-            <input type="text" id='name' placeholder="Fullname" value="John Doe" onChange={() => {}}/>
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Fullname"
+            value="John Doe"
+            onChange={() => {}}
+          />
         </div>
         <label htmlFor="bio">Bio</label>
-        <textarea id='bio' name="bio"/>
+        <textarea id="bio" name="bio" />
         <div>
-            {/* <label htmlFor="job-location">job location</label> */}
-            <label htmlFor="job-location">Name</label>
-            <select id="job-location">
-                <option value="">Select a country</option>
-                <option value="US">United States</option>
-                <option value="GB">United Kingdom</option>
-                <option value="CA">Canada</option>
-                <option value="IN">India</option>
-                <option value="AU">Australia</option>
-            </select>
+          {/* <label htmlFor="job-location">job location</label> */}
+          <label htmlFor="job-location">Name</label>
+          <select id="job-location">
+            <option value="">Select a country</option>
+            <option value="US">United States</option>
+            <option value="GB">United Kingdom</option>
+            <option value="CA">Canada</option>
+            <option value="IN">India</option>
+            <option value="AU">Australia</option>
+          </select>
         </div>
         <div>
-            <label>
-                <input type="checkbox" id='terms' />
-                I agree to the terms and conditions
-            </label>
+          <label>
+            <input type="checkbox" id="terms" />I agree to the terms and
+            conditions
+          </label>
         </div>
         <button disabled>Submit</button>
-    </form>
+      </form>
     </>
   )
 }

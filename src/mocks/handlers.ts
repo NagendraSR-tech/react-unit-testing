@@ -6,10 +6,10 @@ export const handlers = [
     return HttpResponse.json([
       { name: 'John Doe' },
       { name: 'Jane Smith' },
-      { name: 'Alice Johnson' }
-    ]);
+      { name: 'Alice Johnson' },
+    ])
   }),
-];
+]
 
 // prev version msw
 // import { rest } from 'msw'
@@ -26,4 +26,3 @@ export const handlers = [
 //     );
 //   })
 // ];
-
