@@ -14,6 +14,14 @@ export default tseslint.config([
       tseslint.configs.recommended,
       reactHooks.configs['recommended-latest'],
       reactRefresh.configs.vite,
+      {
+        plugins: {
+          'jest-dom': jestDom,
+        },
+        rules: {
+          ...jestDom.configs.recommended.rules,
+        },
+      },
     ],
     languageOptions: {
       ecmaVersion: 2020,

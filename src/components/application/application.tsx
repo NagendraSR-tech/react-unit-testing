@@ -33,7 +33,7 @@ export function Application() {
                 I agree to the terms and conditions
             </label>
         </div>
-        <button>Submit</button>
+        <button disabled>Submit</button>
     </form>
     </>
   )
