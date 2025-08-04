@@ -52,9 +52,9 @@ describe("Counter", () => {
     test("elements are focused in the right order", async () => {
     user.setup();
     render(<Counter />);
+    const incrementButton = screen.getByRole("button", { name: /increment/i });
     const amountInput = screen.getByRole("spinbutton");
     const setButton = screen.getByRole("button", { name: 'Set' });
-    const incrementButton = screen.getByRole("button", { name: /increment/i });
     await user.tab();
     expect(incrementButton).toHaveFocus();
     await user.tab();

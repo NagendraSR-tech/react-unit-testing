@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { Users } from "./users";
+import "@testing-library/jest-dom"
 
 describe("Users", () => {
   test("renders correctly", () => {

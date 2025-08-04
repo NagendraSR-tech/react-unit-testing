@@ -13,9 +13,9 @@ export const Counter = () => {
                 type="number"
                 name="amount"
                 value={amount}
-                onChange={(e) => setAmount(parseInt(e.target.value))}
+                onChange={(e) => setAmount(e.target.value === "" ? 0 : parseInt(e.target.value))}
             />
-            <button onClick={() => setCount(amount)}>Set</button>
+            <button onClick={() => setCount(amount || 0)}>Set</button>
         </div>
     );
 };
