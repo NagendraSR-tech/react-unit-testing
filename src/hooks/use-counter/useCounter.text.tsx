@@ -1,16 +1,32 @@
-import { renderHook } from "@testing-library/react";
+import { renderHook, act } from "@testing-library/react";
 import { useCounter } from "./useCounter";
 
 describe("useCounter", () => {
-  it("should render count with initial count", () => {
+  test("should render count with initial count", () => {
     const { result } = renderHook(useCounter);
     expect(result.current.count).toBe(0);
   });
 
-  it("should accept and render count with initial count", () => {
+  test("should accept and render count with initial count", () => {
     const { result } = renderHook(useCounter, {
         initialProps: { initialCount: 10 },
     });
     expect(result.current.count).toBe(10);
+  });
+
+  test("should increment the count", () => {
+    const { result } = renderHook(useCounter);
+    act(() => {
+      result.current.increment();
+    });
+    expect(result.current.count).toBe(1);
+  });
+
+    test("should decrement the count", () => {
+    const { result } = renderHook(useCounter);
+    act(() => {
+      result.current.increment();
+    });
+    expect(result.current.count).toBe(-1);
   });
 });
